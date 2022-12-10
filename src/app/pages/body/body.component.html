@@ -1,0 +1,18 @@
+<div class="container">
+    <app-media-nav (onMediaTypeChange)="changeMedia($event)"></app-media-nav>
+
+    <h1 style="color: #fff;">Top rated {{media}}</h1>
+
+    <div class="input">
+        <input (input)="onSearchChange($event)" type="text" name="" id="" class="input">
+    </div>
+    
+
+    <div class="item-container" >
+        <app-item 
+        *ngFor="let item of items"
+        [item] = "item"></app-item>
+
+    </div>
+
+</div>
